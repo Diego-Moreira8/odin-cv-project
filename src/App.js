@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./reset.css"
 import "./styles.css"
 import Header from "./components/header";
 import Profile from "./components/profile";
@@ -14,9 +15,11 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Profile />
-        <Education />
-        <Experience />
+        <div id="content">
+          <Profile />
+          <Education />
+          <Experience />
+        </div>
       </div>
     );
   }

@@ -13,46 +13,44 @@ class Profile extends Component {
   render() {
     return (
       <div id="profile">
-        <img 
-          src={profilePicture}
-          width="200" 
-          height="200"
-        />
-
-        <h2>Jhon Doe</h2>
-        <p>Front-End Developer</p>
-
-        <div className="contact-group">
+        <div id="user-info">
           <img 
-            src={emailIcon}
-            height="100"
+            id="profile-picture"
+            src={profilePicture}
           />
-          <p>john.doe8@gmail.com</p>
+          <h2>Jhon Doe</h2>
+          <p>Front-End Developer</p>
         </div>
+        
+        <ol id="contact-list">
+          <li>            
+            <a href="#">
+              <img src={emailIcon}/>
+              john.doe8@gmail.com
+            </a>
+          </li>
 
-        <div className="contact-group">
-          <img 
-            src={phoneIcon}
-            height="100"
-          />
-          <p>(123) 555-1234</p>
-        </div>
+          <li>            
+            <a href="#">
+              <img src={phoneIcon}/>
+              (123) 555-1234
+            </a>
+          </li>
 
-        <div className="contact-group">
-          <img 
-            src={linkedinIcon}
-            height="100"
-          />
-          <p>website1.com</p>
-        </div>
+          <li>            
+            <a href="#">
+              <img src={linkedinIcon}/>
+              website1.com
+            </a>
+          </li>
 
-        <div className="contact-group">
-          <img 
-            src={githubIcon}
-            height="100"
-          />
-          <p>website2.com</p>
-        </div>
+          <li>            
+            <a href="#">
+              <img src={githubIcon}/>
+              website2.com
+            </a>
+          </li>
+        </ol>
       </div>
     );
   }

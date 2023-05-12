@@ -1,4 +1,9 @@
 import React, {Component} from "react";
+import "./styles.css"
+import Header from "./components/header";
+import Profile from "./components/profile";
+import Education from "./components/education";
+import Experience from "./components/experience";
 
 class App extends Component {
   constructor() {
@@ -8,7 +13,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        Hello!
+        <Header />
+        <Profile />
+        <Education />
+        <Experience />
       </div>
     );
   }

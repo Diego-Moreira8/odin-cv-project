@@ -31,10 +31,14 @@ class Experience extends Component {
     return (
       <div id="experience">
         <h2>Experience</h2>
-        <button type="button">Add</button>
-        <ExperienceInfo />
-        <hr />
-        <ExperienceInfo />
+        <div className="history">
+          <button type="button">Add</button>
+            <div className="history-list">
+              <ExperienceInfo />
+              <hr />
+              <ExperienceInfo />
+            </div>
+          </div>
       </div>
     );
   }

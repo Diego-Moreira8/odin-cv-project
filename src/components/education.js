@@ -31,10 +31,14 @@ class Education extends Component {
     return (
       <div id="education">
         <h2>Education</h2>
-        <button type="button">Add</button>
-        <EducationInfo />
-        <hr />
-        <EducationInfo />
+          <div className="history">
+          <button type="button">Add</button>
+            <div className="history-list">
+              <EducationInfo />
+              <hr />
+              <EducationInfo />
+            </div>
+          </div>
       </div>
     );
   }

@@ -22,7 +22,7 @@ class Profile extends Component {
           <p>Front-End Developer</p>
         </div>
         
-        <ol id="contact-list">
+        <ul id="contact-list">
           <li>            
             <a href="#">
               <img src={emailIcon}/>
@@ -50,7 +50,7 @@ class Profile extends Component {
               website2.com
             </a>
           </li>
-        </ol>
+        </ul>
       </div>
     );
   }

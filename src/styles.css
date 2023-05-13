@@ -1,19 +1,38 @@
-:root {
-  font-family: Arial, Helvetica, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
 }
 
-body #content {
-  display: grid;
-  grid-template-columns: 1fr repeat(2, 2fr);
-  gap: 16px;
-  margin: 32px;
+:root {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
 }
-body h2 {
+
+h2 {
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 8px;
 }
-body header {
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+h1, h2, h3, p {
+  color: #3f3f3f;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+#body header {
   background: linear-gradient(100deg, #43596D, #2F465C);
   color: #fff;
   font-size: 2.5rem;
@@ -21,7 +40,13 @@ body header {
   text-align: center;
   padding: 12px 0;
 }
-body #profile {
+#body #content {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 3fr);
+  gap: 16px;
+  margin: 32px 256px;
+}
+#body #content #profile {
   background: linear-gradient(100deg, #43596D, #2F465C);
   color: #fff;
   border-radius: 24px;
@@ -30,12 +55,15 @@ body #profile {
   gap: 48px;
   padding: 32px;
 }
-body #profile #user-info {
+#body #content #profile #user-info {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-body #profile #user-info img {
+#body #content #profile #user-info h2, #body #content #profile #user-info p {
+  color: #fff;
+}
+#body #content #profile #user-info img {
   border: 4px solid #fff;
   border-radius: 100%;
   width: 200px;
@@ -43,12 +71,12 @@ body #profile #user-info img {
   object-fit: cover;
   margin-bottom: 8px;
 }
-body #profile #contact-list {
+#body #content #profile #contact-list {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-body #profile #contact-list li a {
+#body #content #profile #contact-list li a {
   text-decoration: none;
   color: #fff;
   width: fit-content;
@@ -59,12 +87,49 @@ body #profile #contact-list li a {
   padding: 8px 24px;
   border-radius: 16px;
 }
-body #profile #contact-list li a img {
+#body #content #profile #contact-list li a img {
   width: 1.5rem;
 }
-body #profile #contact-list li a:hover {
+#body #content #profile #contact-list li a:hover {
   text-decoration: underline;
   background-color: rgba(255, 255, 255, 0.1254901961);
+}
+#body #content #education, #body #content #experience {
+  background: linear-gradient(100deg, #43596D, #2F465C);
+  border-radius: 24px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+#body #content #education h2, #body #content #experience h2 {
+  color: #fff;
+  text-align: center;
+  margin: 8px 0;
+}
+#body #content #education .history, #body #content #experience .history {
+  background-color: #EDEDED;
+  margin: 4px;
+  border-radius: 21px;
+  padding: 0 24px;
+}
+#body #content #education .history button, #body #content #experience .history button {
+  background-color: #2F465C;
+  color: #fff;
+  padding: 6px 32px;
+  font-size: 1rem;
+  border-radius: 32px;
+  border: none;
+  font-weight: bold;
+  display: block;
+  margin: 32px auto;
+  cursor: pointer;
+}
+#body #content #education .history .history-list p, #body #content #experience .history .history-list p {
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+#body #content #education .history .history-list hr, #body #content #experience .history .history-list hr {
+  margin: 32px 0;
+  border-top: 1px solid #000;
 }
 
 /*# sourceMappingURL=styles.css.map */

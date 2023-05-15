@@ -111,6 +111,8 @@ strong {
   margin: 4px;
   border-radius: 21px;
   padding: 0 24px;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 #body #content #education .history button, #body #content #experience .history button {
   background-color: #2F465C;
@@ -124,13 +126,21 @@ strong {
   margin: 32px auto;
   cursor: pointer;
 }
+#body #content #education .history .history-list, #body #content #experience .history .history-list {
+  overflow-y: auto;
+  height: calc(100vh - 350px);
+}
 #body #content #education .history .history-list p, #body #content #experience .history .history-list p {
   margin-bottom: 8px;
   line-height: 1.25;
 }
-#body #content #education .history .history-list hr, #body #content #experience .history .history-list hr {
-  margin: 32px 0;
-  border-top: 1px solid #000;
+#body #content #education .history .history-list .description-group, #body #content #experience .history .history-list .description-group {
+  border-bottom: 1px solid #3f3f3f;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+}
+#body #content #education .history .history-list .description-group:last-of-type, #body #content #experience .history .history-list .description-group:last-of-type {
+  border-bottom: none;
 }
 #body footer {
   background: linear-gradient(100deg, #43596D, #2F465C);

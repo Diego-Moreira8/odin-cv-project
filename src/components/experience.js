@@ -1,26 +1,5 @@
 import React, {Component} from "react";
-
-class ExperienceInfo extends Component {
-  constructor() {
-    super()
-  }
-
-  render() {
-    return (
-      <div className="exp-info-group">
-        <h3>Location</h3>
-        <h3>Job</h3>
-        <p><strong>20XX - 20XX</strong></p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa 
-          mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, 
-          mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis 
-          tellus. 
-        </p>
-      </div>
-    );
-  }
-}
+import DescriptionBox from "./description-box";
 
 class Experience extends Component {
   constructor() {
@@ -34,9 +13,18 @@ class Experience extends Component {
         <div className="history">
           <button type="button">Add</button>
             <div className="history-list">
-              <ExperienceInfo />
-              <hr />
-              <ExperienceInfo />
+            <DescriptionBox 
+                location="Location" 
+                area="Course" 
+                period="20XX - 20XX" 
+                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+              />
+            <DescriptionBox 
+                location="Location" 
+                area="Course" 
+                period="20XX - 20XX" 
+                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+              />
             </div>
           </div>
       </div>

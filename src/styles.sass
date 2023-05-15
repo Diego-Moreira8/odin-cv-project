@@ -118,6 +118,8 @@ strong
         margin: 4px
         border-radius: calc($sections-border-radius - 3px)
         padding: 0 24px
+        display: grid
+        grid-template-rows: auto 1fr
 
         button
           background-color: $main-color
@@ -132,14 +134,21 @@ strong
           cursor: pointer
 
         .history-list
+          overflow-y: auto
+          height: calc( 100vh - 350px )
 
           p
             margin-bottom: 8px
             line-height: 1.25
 
-          hr
-            margin: 32px 0
-            border-top: 1px solid #000
+          .description-group
+            border-bottom: 1px solid $black-text-color
+            $spacing: 32px
+            margin-bottom: $spacing
+            padding-bottom: $spacing
+
+          .description-group:last-of-type
+            border-bottom: none
 
   footer
     background: $main-color-gradient

@@ -5,6 +5,24 @@ import emailIcon from "../images/icon-email.svg";
 import linkedinIcon from "../images/icon-linkedin.svg";
 import githubIcon from "../images/icon-github.svg";
 
+class UserLink extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const {link, icon, text} = this.props
+    return (
+      <li>            
+        <a href={link}>
+          <img src={icon}/>
+          {text}
+        </a>
+      </li>
+    );
+  }
+}
+
 class Profile extends Component {
   constructor() {
     super();
@@ -23,32 +41,20 @@ class Profile extends Component {
         </div>
         
         <ul id="contact-list">
-          <li>            
-            <a href="#">
-              <img src={emailIcon}/>
-              john.doe8@gmail.com
-            </a>
+          <li>
+            <UserLink link="#" icon={emailIcon} text="john.doe8@gmail.com" />
           </li>
 
-          <li>            
-            <a href="#">
-              <img src={phoneIcon}/>
-              (123) 555-1234
-            </a>
+          <li>
+            <UserLink link="#" icon={phoneIcon} text="(123) 555-1234" />
           </li>
 
-          <li>            
-            <a href="#">
-              <img src={linkedinIcon}/>
-              website1.com
-            </a>
+          <li>
+            <UserLink link="#" icon={linkedinIcon} text="website1.com" />
           </li>
 
-          <li>            
-            <a href="#">
-              <img src={githubIcon}/>
-              website2.com
-            </a>
+          <li>
+            <UserLink link="#" icon={githubIcon} text="website2.com" />
           </li>
         </ul>
       </div>

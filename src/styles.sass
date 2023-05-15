@@ -33,7 +33,7 @@ strong
 #body
   height: 100vh
   display: grid
-  grid-template-rows: auto 1fr
+  grid-template-rows: auto 1fr auto
 
   header
     background: $main-color-gradient
@@ -47,7 +47,8 @@ strong
     display: grid
     grid-template-columns: 2fr repeat(2, 3fr)
     gap: 16px
-    margin: 32px 256px
+    margin: 32px auto
+    width: 1200px
 
     #profile
       background: $main-color-gradient
@@ -139,5 +140,33 @@ strong
           hr
             margin: 32px 0
             border-top: 1px solid #000
+
+  footer
+    background: $main-color-gradient
+    color: $white-text-color
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .credits
+      margin-right: 16px
+
+    .links
+      display: flex
+      align-items: center
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        $margin: 4px
+        padding: calc( 8px - $margin ) calc( 16px - $margin )
+        margin: $margin
+        border-radius: 4px
+
+      a:hover
+        background-color: #ffffff20
+
+
 
 //

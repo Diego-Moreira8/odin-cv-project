@@ -30,7 +30,7 @@ strong {
 #body {
   height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 #body header {
   background: linear-gradient(100deg, #43596D, #2F465C);
@@ -44,7 +44,8 @@ strong {
   display: grid;
   grid-template-columns: 2fr repeat(2, 3fr);
   gap: 16px;
-  margin: 32px 256px;
+  margin: 32px auto;
+  width: 1200px;
 }
 #body #content #profile {
   background: linear-gradient(100deg, #43596D, #2F465C);
@@ -130,6 +131,31 @@ strong {
 #body #content #education .history .history-list hr, #body #content #experience .history .history-list hr {
   margin: 32px 0;
   border-top: 1px solid #000;
+}
+#body footer {
+  background: linear-gradient(100deg, #43596D, #2F465C);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#body footer .credits {
+  margin-right: 16px;
+}
+#body footer .links {
+  display: flex;
+  align-items: center;
+}
+#body footer .links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  margin: 4px;
+  border-radius: 4px;
+}
+#body footer .links a:hover {
+  background-color: rgba(255, 255, 255, 0.1254901961);
 }
 
 /*# sourceMappingURL=styles.css.map */

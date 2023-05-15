@@ -9,54 +9,57 @@ class Education extends Component {
   render() {
     return (
       <div id="education">
-        <h2>Education</h2>
-          <div className="history">
+        <div className="section-header">
+          <h2>Education</h2>
+          <button type="button" className="edit">Edit</button>
+        </div>
+        <div className="history">
           <button type="button">Add</button>
-            <div className="history-list">
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-              <DescriptionBox 
-                location="Location" 
-                area="Course" 
-                period="20XX - 20XX" 
-                description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
-              />
-            </div>
+          <div className="history-list">
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
+            <DescriptionBox 
+              location="Location" 
+              area="Course" 
+              period="20XX - 20XX" 
+              description="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. "
+            />
           </div>
+        </div>
       </div>
     );
   }

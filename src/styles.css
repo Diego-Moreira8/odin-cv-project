@@ -47,19 +47,45 @@ strong {
   margin: 32px auto;
   width: 1200px;
 }
+#body #content .edit {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1254901961);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 16px;
+  text-decoration: underline;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+#body #content .section-header {
+  position: relative;
+}
+#body #content .section-header .edit {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  height: calc(100% - 4px);
+}
 #body #content #profile {
   background: linear-gradient(100deg, #43596D, #2F465C);
   color: #fff;
   border-radius: 24px;
   display: flex;
   flex-flow: column;
-  gap: 48px;
-  padding: 32px;
+  gap: 16px;
+  padding: 4px 32px;
+}
+#body #content #profile .edit {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 16px;
 }
 #body #content #profile #user-info {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-bottom: 48px;
 }
 #body #content #profile #user-info h2, #body #content #profile #user-info p {
   color: #fff;

@@ -4,6 +4,7 @@ $main-color-gradient: linear-gradient(100deg, #43596D, #2F465C)
 $main-color: #2F465C
 $title-color: #fff
 $white-text-color: #fff
+$white-hover: #ffffff20
 $black-text-color: #3f3f3f
 $medium-white: #EDEDED
 $sections-border-radius: 24px
@@ -50,20 +51,46 @@ strong
     margin: 32px auto
     width: 1200px
 
+    .edit
+      border: none
+      background-color: $white-hover
+      color: $white-text-color
+      font-weight: bold
+      cursor: pointer
+      padding: 0 16px
+      text-decoration: underline
+      font-size: 1rem
+      border-radius: 8px
+
+    .section-header
+      position: relative
+
+      .edit
+        position: absolute
+        top: 4px
+        right: 20px
+        height: calc(100% - 4px)
+
+
     #profile
       background: $main-color-gradient
       color: $white-text-color
       border-radius: $sections-border-radius
       display: flex
       flex-flow: column
-      gap: 48px
-      padding: 32px
+      gap: 16px
+      padding: 4px 32px
 
+      .edit
+        width: fit-content
+        margin: 0 auto
+        padding: 10px 16px
 
       #user-info
         display: flex
         flex-flow: column
         align-items: center
+        margin-bottom: 48px
 
         h2, p
           color: $white-text-color
@@ -100,7 +127,7 @@ strong
 
           a:hover
             text-decoration: underline
-            background-color: #ffffff20
+            background-color: $white-hover
 
     #education, #experience
       background: $main-color-gradient
@@ -174,7 +201,7 @@ strong
         border-radius: 4px
 
       a:hover
-        background-color: #ffffff20
+        background-color: $white-hover
 
 
 

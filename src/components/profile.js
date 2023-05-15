@@ -31,6 +31,7 @@ class Profile extends Component {
   render() {
     return (
       <div id="profile">
+        <button type="button" className="edit">Edit</button>
         <div id="user-info">
           <img 
             id="profile-picture"

@@ -116,7 +116,7 @@ strong {
   display: grid;
   grid-template-rows: auto 1fr;
 }
-#body #content #education .history button, #body #content #experience .history button {
+#body #content #education .history .add-button, #body #content #experience .history .add-button {
   background-color: #2F465C;
   color: #fff;
   padding: 6px 32px;
@@ -140,6 +140,26 @@ strong {
   border-bottom: 1px solid #3f3f3f;
   margin-bottom: 32px;
   padding-bottom: 32px;
+  position: relative;
+}
+#body #content #education .history .history-list .description-group .edit-button, #body #content #experience .history .history-list .description-group .edit-button {
+  display: none;
+  background-color: #EDEDED;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2F465C;
+  text-decoration: underline;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  outline: 1px solid #2F465C;
+  padding: 4px 8px;
+}
+#body #content #education .history .history-list .description-group .edit-button.active, #body #content #experience .history .history-list .description-group .edit-button.active {
+  display: block;
 }
 #body #content #education .history .history-list .description-group:last-of-type, #body #content #experience .history .history-list .description-group:last-of-type {
   border-bottom: none;

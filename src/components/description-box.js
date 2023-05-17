@@ -9,6 +9,7 @@ class DescriptionBox extends Component {
     const {location, area, period, description} = this.props;
     return (
       <div className="description-group">
+        <button type="button" className="edit-button">Edit</button>
         <h3>{location}</h3>
         <h3>{area}</h3>
         <p><strong>{period}</strong></p>

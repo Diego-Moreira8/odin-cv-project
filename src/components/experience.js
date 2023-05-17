@@ -11,7 +11,7 @@ class Experience extends Component {
       <div id="experience">
         <h2>Experience</h2>
         <div className="history">
-          <button type="button">Add</button>
+          <button type="button" className="add-button">Add</button>
             <div className="history-list">
             <DescriptionBox 
                 location="Location" 

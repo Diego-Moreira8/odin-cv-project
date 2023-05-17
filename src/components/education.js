@@ -11,7 +11,7 @@ class Education extends Component {
       <div id="education">
         <h2>Education</h2>
         <div className="history">
-          <button type="button">Add</button>
+          <button type="button" className="add-button">Add</button>
           <div className="history-list">
             <DescriptionBox 
               location="Location" 

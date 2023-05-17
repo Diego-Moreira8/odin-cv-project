@@ -123,7 +123,7 @@ strong
         display: grid
         grid-template-rows: auto 1fr
 
-        button
+        .add-button
           background-color: $main-color
           color: $white-text-color
           padding: 6px 32px
@@ -148,6 +148,26 @@ strong
             $spacing: 32px
             margin-bottom: $spacing
             padding-bottom: $spacing
+            position: relative
+
+            .edit-button
+              display: none
+              background-color: $medium-white
+              border: none
+              border-radius: 4px
+              font-size: 1rem
+              font-weight: bold
+              color: $main-color
+              text-decoration: underline
+              position: absolute
+              top: 8px
+              right: 8px
+              cursor: pointer
+              outline: 1px solid $main-color
+              padding: 4px 8px
+
+            .edit-button.active
+              display: block
 
           .description-group:last-of-type
             border-bottom: none

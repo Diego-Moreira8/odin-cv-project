@@ -9,10 +9,7 @@ class Education extends Component {
   render() {
     return (
       <div id="education">
-        <div className="section-header">
-          <h2>Education</h2>
-          <button type="button" className="edit">Edit</button>
-        </div>
+        <h2>Education</h2>
         <div className="history">
           <button type="button">Add</button>
           <div className="history-list">

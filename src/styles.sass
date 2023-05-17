@@ -48,29 +48,9 @@ strong
     display: grid
     grid-template-columns: 2fr repeat(2, 3fr)
     gap: 16px
-    margin: 32px auto
-    width: 1200px
-
-    .edit
-      border: none
-      background-color: $white-hover
-      color: $white-text-color
-      font-weight: bold
-      cursor: pointer
-      padding: 0 16px
-      text-decoration: underline
-      font-size: 1rem
-      border-radius: 8px
-
-    .section-header
-      position: relative
-
-      .edit
-        position: absolute
-        top: 4px
-        right: 20px
-        height: calc(100% - 4px)
-
+    margin: 0 auto
+    padding: 32px
+    max-width: 1200px
 
     #profile
       background: $main-color-gradient
@@ -79,12 +59,7 @@ strong
       display: flex
       flex-flow: column
       gap: 16px
-      padding: 4px 32px
-
-      .edit
-        width: fit-content
-        margin: 0 auto
-        padding: 10px 16px
+      padding: 48px 32px
 
       #user-info
         display: flex
@@ -183,6 +158,7 @@ strong
     display: flex
     align-items: center
     justify-content: center
+    padding: 4px 0
 
     .credits
       margin-right: 16px
@@ -195,9 +171,8 @@ strong
         display: flex
         align-items: center
         justify-content: center
-        $margin: 4px
-        padding: calc( 8px - $margin ) calc( 16px - $margin )
-        margin: $margin
+        margin: 0 4px
+        padding: 4px 12px
         border-radius: 4px
 
       a:hover

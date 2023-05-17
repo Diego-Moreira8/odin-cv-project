@@ -9,10 +9,7 @@ class Experience extends Component {
   render() {
     return (
       <div id="experience">
-        <div className="section-header">
-          <h2>Experience</h2>
-          <button type="button" className="edit">Edit</button>
-        </div>
+        <h2>Experience</h2>
         <div className="history">
           <button type="button">Add</button>
             <div className="history-list">

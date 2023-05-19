@@ -1,27 +1,28 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
+import "../styles/MyFooter.css";
 
-class MyFooter extends Component {
+export default class MyFooter extends Component {
   constructor() {
     super();
   }
 
   render() {
     return (
-      <footer>
+      <footer className="my-footer">
         <div className="credits">Build by Diego Moreira in 2023</div>
 
         <div>●</div>
 
         <div className="links">
           <a href="mailto:diego.moreira529@gmail.com">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="24" 
-              height="24" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
             >
-              <path 
-                d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" 
+              <path
+                d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
                 fill="#ffffff"
               />
             </svg>
@@ -46,9 +47,7 @@ class MyFooter extends Component {
 
           <div>●</div>
 
-          <a
-            href="https://www.linkedin.com/in/diego-moreira8/" 
-            target="_blank">
+          <a href="https://www.linkedin.com/in/diego-moreira8/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -66,5 +65,3 @@ class MyFooter extends Component {
     );
   }
 }
-
-export default MyFooter

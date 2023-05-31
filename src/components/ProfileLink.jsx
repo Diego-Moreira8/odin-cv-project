@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import uniqid from "uniqid";
+import { v4 as uuid } from "uuid";
 
 export default class ProfileLink extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export default class ProfileLink extends Component {
   render() {
     const { link, icon, text } = this.props;
     return (
-      <li key={uniqid()}>
+      <li key={uuid()}>
         <a href={link} target="_blank">
           <img src={icon} />
           {text}

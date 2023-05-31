@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import uniqid from "uniqid";
+import { v4 as uuid } from "uuid";
 
 export default class ExperienceItem extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export default class ExperienceItem extends Component {
   render() {
     const { location, area, from, to, description } = this.props;
     return (
-      <li key={uniqid()}>
+      <li key={uuid()}>
         <h3 className="exp-location">{location}</h3>
         <h3 className="exp-area">{area}</h3>
         <div className="exp-period">

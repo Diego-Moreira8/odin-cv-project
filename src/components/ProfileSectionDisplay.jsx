@@ -15,6 +15,9 @@ class ProfileSectionDisplay extends Component {
     const { phone, email, linkedin, github } = contactList;
     return (
       <div className="profile-section-display">
+        <button type="button" onClick={this.props.startEditMode}>
+          Edit
+        </button>
         <div className="profile-info">
           <img
             className="profile-picture"

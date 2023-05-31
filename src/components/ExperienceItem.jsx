@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { v4 as uuid } from "uuid";
 
 export default class ExperienceItem extends Component {
   constructor(props) {
@@ -7,17 +6,26 @@ export default class ExperienceItem extends Component {
   }
 
   render() {
-    const { location, area, from, to, description } = this.props;
+    const { expInfo, deleteExpItem } = this.props;
+    const { id, location, area, yearFrom, yearTo, description } = expInfo;
     return (
-      <li key={uuid()}>
+      <>
         <h3 className="exp-location">{location}</h3>
         <h3 className="exp-area">{area}</h3>
         <div className="exp-period">
-          <span className="exp-period-from">{from}</span>
-          <span className="exp-period-to">{to}</span>
+          <span className="exp-period-from">{yearFrom}</span>
+          {" to "}
+          <span className="exp-period-to">{yearTo}</span>
         </div>
         <p className="exp-description">{description}</p>
-      </li>
+        <button
+          type="button"
+          title="Double click to delete"
+          onDoubleClick={() => deleteExpItem(id)}
+        >
+          Delete
+        </button>
+      </>
     );
   }
 }

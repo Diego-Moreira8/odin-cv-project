@@ -8,17 +8,20 @@ export default class Experience extends Component {
   }
 
   render() {
+    const { expType, deleteExpItem } = this.props;
     return (
       <section className="experience-section">
-        <h2 className="experience-section-header">
-          {this.props.experienceType}
-        </h2>
+        <h2 className="experience-section-header">{expType}</h2>
         <div className="experience-section-box">
           <button type="button" className="add-experience-button">
             Add
           </button>
           <ul className="history-list">
-            <ExperienceItem />
+            {this.props.expList.map((item) => (
+              <li key={item.id}>
+                <ExperienceItem expInfo={item} deleteExpItem={deleteExpItem} />
+              </li>
+            ))}
           </ul>
         </div>
       </section>

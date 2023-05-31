@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles/App.css";
 import Header from "./components/Header";
 import ProfileSection from "./components/ProfileSection";
-import ExperienceSection from "./components/ExperienceSection";
+import EducationSection from "./components/EducationSection";
 import MyFooter from "./components/MyFooter";
 
 export default class App extends Component {
@@ -16,8 +16,7 @@ export default class App extends Component {
         <Header />
         <main>
           <ProfileSection />
-          <ExperienceSection experienceType="Education" />
-          <ExperienceSection experienceType="Professional Experience" />
+          <EducationSection />
         </main>
         <MyFooter />
       </div>

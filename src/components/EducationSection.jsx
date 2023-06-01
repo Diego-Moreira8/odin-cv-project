@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Experience from "./ExperienceSection";
+import ExperienceSection from "./ExperienceSection";
 import { v4 as uuid } from "uuid";
 
 class EducationSection extends Component {
@@ -27,6 +27,12 @@ class EducationSection extends Component {
     };
 
     this.deleteExpItem = this.deleteExpItem.bind(this);
+    this.updateItem = this.updateItem.bind(this);
+  }
+
+  updateItem(newItem) {
+    // Já está recebendo o novo item, só atualizar...
+    console.log(newItem);
   }
 
   deleteExpItem(id) {
@@ -38,9 +44,10 @@ class EducationSection extends Component {
 
   render() {
     return (
-      <Experience
+      <ExperienceSection
         expType="Education"
         expList={this.state.educationList}
+        updateItem={this.updateItem}
         deleteExpItem={this.deleteExpItem}
       />
     );

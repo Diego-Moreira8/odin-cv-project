@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import ExperienceItem from "./ExperienceItem";
 import "../styles/ExperienceSection.css";
 
-export default class Experience extends Component {
+export default class ExperienceSection extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const { expType, deleteExpItem } = this.props;
+    const { expType, expList, updateItem, deleteExpItem } = this.props;
     return (
       <section className="experience-section">
         <h2 className="experience-section-header">{expType}</h2>
@@ -17,9 +17,13 @@ export default class Experience extends Component {
             Add
           </button>
           <ul className="history-list">
-            {this.props.expList.map((item) => (
+            {expList.map((item) => (
               <li key={item.id}>
-                <ExperienceItem expInfo={item} deleteExpItem={deleteExpItem} />
+                <ExperienceItem
+                  expInfo={item}
+                  updateItem={updateItem}
+                  deleteExpItem={deleteExpItem}
+                />
               </li>
             ))}
           </ul>

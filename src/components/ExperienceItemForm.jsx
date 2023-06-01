@@ -14,6 +14,7 @@ class ExperienceItemForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateItem(this.state.expInfoCopy);
+    this.props.toggleEditing();
   }
 
   handleChanges(e) {

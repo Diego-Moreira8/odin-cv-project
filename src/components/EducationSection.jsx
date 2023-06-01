@@ -31,8 +31,15 @@ class EducationSection extends Component {
   }
 
   updateItem(newItem) {
-    // Já está recebendo o novo item, só atualizar...
-    console.log(newItem);
+    const educationListCopy = [...this.state.educationList];
+    const indexToUpdate = educationListCopy.findIndex(
+      (item) => item.id === newItem.id
+    );
+    educationListCopy[indexToUpdate] = { ...newItem };
+    this.setState((prevState) => ({
+      ...prevState,
+      educationList: [...educationListCopy],
+    }));
   }
 
   deleteExpItem(id) {

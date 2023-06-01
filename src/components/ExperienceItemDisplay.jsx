@@ -18,7 +18,7 @@ class ExperienceItemDisplay extends Component {
           <span className="exp-period-to">{yearTo}</span>
         </div>
         <p className="exp-description">{description}</p>
-        <button type="button" onClick={this.props.startEditing}>
+        <button type="button" onClick={this.props.toggleEditing}>
           Edit
         </button>
         <button

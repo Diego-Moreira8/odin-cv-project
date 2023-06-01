@@ -6,14 +6,17 @@ class ExperienceItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isEdting: true,
+      isEdting: false,
     };
 
-    this.startEditing = this.startEditing.bind(this);
+    this.toggleEditing = this.toggleEditing.bind(this);
   }
 
-  startEditing() {
-    this.setState((prevState) => ({ ...prevState, isEdting: true }));
+  toggleEditing() {
+    this.setState((prevState) => ({
+      ...prevState,
+      isEdting: !prevState.isEdting,
+    }));
   }
 
   render() {
@@ -21,11 +24,12 @@ class ExperienceItem extends Component {
       <ExperienceItemForm
         expInfo={this.props.expInfo}
         updateItem={this.props.updateItem}
+        toggleEditing={this.toggleEditing}
       />
     ) : (
       <ExperienceItemDisplay
         expInfo={this.props}
-        startEditing={this.startEditing}
+        toggleEditing={this.toggleEditing}
       />
     );
   }

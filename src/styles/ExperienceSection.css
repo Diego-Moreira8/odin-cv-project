@@ -53,6 +53,8 @@ button.danger {
   display: flex;
   flex-flow: column;
   align-items: center;
+  overflow: auto;
+  height: calc(100vh - 300px);
 }
 .experience-section .experience-section-box .add-experience-button {
   background-color: #2f465c;

@@ -37,7 +37,7 @@ button.danger {
 #body {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 75px calc(100vh - 125px) 50px;
 }
 #body main {
   max-width: 1200px;

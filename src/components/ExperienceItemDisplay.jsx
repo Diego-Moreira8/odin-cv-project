@@ -6,8 +6,9 @@ class ExperienceItemDisplay extends Component {
   }
 
   render() {
-    const { expInfo, deleteExpItem } = this.props.expInfo;
-    const { id, location, area, yearFrom, yearTo, description } = expInfo;
+    const { experienceInfo, deleteExperience } = this.props;
+    const { id, location, area, yearFrom, yearTo, description } =
+      experienceInfo;
     return (
       <>
         <h3 className="exp-location">{location}</h3>
@@ -24,7 +25,7 @@ class ExperienceItemDisplay extends Component {
         <button
           type="button"
           title="Double click to delete"
-          onDoubleClick={() => deleteExpItem(id)}
+          onDoubleClick={() => deleteExperience(id)}
         >
           Delete
         </button>

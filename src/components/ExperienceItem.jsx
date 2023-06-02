@@ -20,15 +20,17 @@ class ExperienceItem extends Component {
   }
 
   render() {
+    const { experienceInfo, updateExperience, deleteExperience } = this.props;
     return this.state.isEdting ? (
       <ExperienceItemForm
-        expInfo={this.props.expInfo}
-        updateItem={this.props.updateItem}
+        experienceInfo={experienceInfo}
+        updateExperience={updateExperience}
         toggleEditing={this.toggleEditing}
       />
     ) : (
       <ExperienceItemDisplay
-        expInfo={this.props}
+        experienceInfo={experienceInfo}
+        deleteExperience={deleteExperience}
         toggleEditing={this.toggleEditing}
       />
     );

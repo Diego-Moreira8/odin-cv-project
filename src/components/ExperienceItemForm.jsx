@@ -4,7 +4,7 @@ class ExperienceItemForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      expInfoCopy: { ...this.props.expInfo },
+      expInfoCopy: { ...this.props.experienceInfo },
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,7 +13,7 @@ class ExperienceItemForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateItem(this.state.expInfoCopy);
+    this.props.updateExperience(this.state.expInfoCopy);
     this.props.toggleEditing();
   }
 
@@ -84,7 +84,9 @@ class ExperienceItemForm extends Component {
             onChange={this.handleChanges}
           />
         </div>
-        <button type="button">Cancel</button>
+        <button type="button" onClick={this.props.toggleEditing}>
+          Cancel
+        </button>
         <button type="submit">Save</button>
       </form>
     );

@@ -1,10 +1,26 @@
 import React, { Component } from "react";
+import { v4 as uuid } from "uuid";
 
 class ExperienceItemForm extends Component {
   constructor(props) {
     super(props);
+
+    this.isAddingNewExperience = !this.props.hasOwnProperty("experienceInfo");
+    this.emptyExperienceInfo = {
+      id: uuid(),
+      location: "",
+      area: "",
+      yearFrom: 0,
+      yearTo: 0,
+      description: "",
+    };
+
+    /* If props has no objects,
+    this form will be used to add a new item. */
     this.state = {
-      expInfoCopy: { ...this.props.experienceInfo },
+      expInfoCopy: this.isAddingNewExperience
+        ? { ...this.emptyExperienceInfo }
+        : { ...this.props.experienceInfo },
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,8 +29,14 @@ class ExperienceItemForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateExperience(this.state.expInfoCopy);
-    this.props.toggleEditing();
+
+    if (this.isAddingNewExperience) {
+      this.props.addExperience(this.state.expInfoCopy);
+    } else {
+      this.props.updateExperience(this.state.expInfoCopy);
+    }
+
+    this.props.cancelBtnAction();
   }
 
   handleChanges(e) {
@@ -84,7 +106,7 @@ class ExperienceItemForm extends Component {
             onChange={this.handleChanges}
           />
         </div>
-        <button type="button" onClick={this.props.toggleEditing}>
+        <button type="button" onClick={this.props.cancelBtnAction}>
           Cancel
         </button>
         <button type="submit">Save</button>

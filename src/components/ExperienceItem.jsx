@@ -25,7 +25,7 @@ class ExperienceItem extends Component {
       <ExperienceItemForm
         experienceInfo={experienceInfo}
         updateExperience={updateExperience}
-        toggleEditing={this.toggleEditing}
+        cancelBtnAction={this.toggleEditing}
       />
     ) : (
       <ExperienceItemDisplay

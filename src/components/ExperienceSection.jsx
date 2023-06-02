@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { v4 as uuid } from "uuid";
 import ExperienceItem from "./ExperienceItem";
+import ExperienceItemForm from "./ExperienceItemForm";
 import "../styles/ExperienceSection.css";
 
 export default class ExperienceSection extends Component {
@@ -8,34 +9,37 @@ export default class ExperienceSection extends Component {
     super(props);
 
     this.state = {
+      isAddingNewExp: false,
       experienceList: [
         {
           id: uuid(),
-          location: "UFCAT",
-          area: "Computer Science",
+          location: "A university",
+          area: "A course",
           yearFrom: 2016,
           yearTo: 2020,
-          description: "Description text..........",
-        },
-        {
-          id: uuid(),
-          location: "Una",
-          area: "Psychology",
-          yearFrom: 2020,
-          yearTo: 2024,
-          description: "Description text..........",
+          description: "A brief text that describes your experience.",
         },
       ],
     };
 
     this.addExperience = this.addExperience.bind(this);
+    this.toggleIsAddingNewExp = this.toggleIsAddingNewExp.bind(this);
     this.updateExperience = this.updateExperience.bind(this);
     this.deleteExperience = this.deleteExperience.bind(this);
   }
 
   addExperience(newExperience) {
-    // TODO
-    console.log(newExperience);
+    this.setState((prevState) => ({
+      ...prevState,
+      experienceList: [...prevState.experienceList, newExperience],
+    }));
+  }
+
+  toggleIsAddingNewExp() {
+    this.setState((prevState) => ({
+      ...prevState,
+      isAddingNewExp: !prevState.isAddingNewExp,
+    }));
   }
 
   updateExperience(newExperience) {
@@ -68,9 +72,24 @@ export default class ExperienceSection extends Component {
         </h2>
 
         <div className="experience-section-box">
-          <button type="button" className="add-experience-button">
-            Add
-          </button>
+          {this.state.isAddingNewExp ? (
+            <>
+              <h3>New item:</h3>
+              <ExperienceItemForm
+                addExperience={this.addExperience}
+                updateExperience={this.updateExperience}
+                cancelBtnAction={this.toggleIsAddingNewExp}
+              />
+            </>
+          ) : (
+            <button
+              type="button"
+              className="add-experience-button"
+              onClick={this.toggleIsAddingNewExp}
+            >
+              Add
+            </button>
+          )}
 
           <ul className="history-list">
             {this.state.experienceList.map((experience) => (

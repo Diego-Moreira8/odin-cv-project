@@ -10,6 +10,7 @@ $black: #3f3f3f
 $white: #fff
 $medium-white: #ededed
 $white-hover: #ffffff20
+$danger: #760505
 
 :root
   font-family: $main-fonts
@@ -27,8 +28,14 @@ button
   font-weight: bold
   font-size: 1rem
   padding: 4px 12px
-  border: 2px solid $black
+  border: 2px solid $medium-white
   border-radius: 1rem
-  background-color: inherit
-  color: inherit
+  background-color: $main-color
+  color: $white
   cursor: pointer
+
+button:hover
+  outline: 2px solid $main-color
+
+button.danger
+  background-color: $danger

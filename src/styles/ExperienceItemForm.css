@@ -34,33 +34,42 @@ button.danger {
   background-color: #760505;
 }
 
-footer {
-  padding: 4px 0;
-  background: linear-gradient(100deg, #43596d, #2f465c);
-  color: #fff;
+form {
   display: flex;
-  align-items: center;
+  flex-flow: column;
+  gap: 8px;
+  width: 100%;
+}
+form .form-row {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #3f3f3f;
+  background-color: #fff;
+}
+form .form-row label {
+  padding: 8px 8px 0 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+form .form-row input, form .form-row textarea {
+  padding: 4px 8px 8px 8px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1rem;
+  border: none;
+}
+form .form-row input:focus, form .form-row textarea:focus {
+  outline: none;
+}
+form .form-row textarea {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+form .form-buttons {
+  display: flex;
   justify-content: center;
   gap: 8px;
-}
-footer .credits {
-  margin-right: 4px;
-}
-footer .links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-footer .links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-footer .links a:hover {
-  background-color: rgba(255, 255, 255, 0.1254901961);
 }
 
-/*# sourceMappingURL=MyFooter.css.map */
+/*# sourceMappingURL=ExperienceItemForm.css.map */

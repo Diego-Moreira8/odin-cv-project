@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { v4 as uuid } from "uuid";
+import "../styles/ExperienceItemForm.css";
 
 class ExperienceItemForm extends Component {
   constructor(props) {
@@ -114,10 +115,16 @@ class ExperienceItemForm extends Component {
             onChange={this.handleChanges}
           />
         </div>
-        <button type="button" onClick={this.props.cancelBtnAction}>
-          Cancel
-        </button>
-        <button type="submit">Save</button>
+        <div className="form-buttons">
+          <button
+            type="button"
+            className="cancel-button"
+            onClick={this.props.cancelBtnAction}
+          >
+            Cancel
+          </button>
+          <button type="submit">Save</button>
+        </div>
       </form>
     );
   }

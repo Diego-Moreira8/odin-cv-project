@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { v4 as uuid } from "uuid";
 import ExperienceItem from "./ExperienceItem";
 import ExperienceItemForm from "./ExperienceItemForm";
+import "../styles/ExperienceSection.css";
 
 export default class ExperienceSection extends Component {
   constructor(props) {
@@ -10,6 +11,70 @@ export default class ExperienceSection extends Component {
     this.state = {
       isAddingNewExp: false,
       experienceList: [
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
+        {
+          id: uuid(),
+          location: "A university",
+          area: "A course",
+          yearFrom: 2016,
+          yearTo: 2020,
+          description: "A brief text that describes your experience.",
+        },
         {
           id: uuid(),
           location: "A university",

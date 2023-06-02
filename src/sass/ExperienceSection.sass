@@ -1,0 +1,37 @@
+@use "base"
+
+.experience-section
+  background: base.$main-color-gradient
+  border-radius: base.$sections-border-radius
+  padding: 4px
+  display: grid
+  grid-template-rows: auto 1fr
+
+  h2
+    color: base.$white
+    text-align: center
+    margin: 8px 16px
+
+  .experience-section-box
+    background-color: base.$medium-white
+    padding: 16px
+    border-radius: calc(base.$sections-border-radius - 4px)
+    display: flex
+    flex-flow: column
+    align-items: center
+
+    .add-experience-button
+      background-color: base.$main-color
+      color: base.$white
+    
+    .history-list
+      width: 100%
+      display: flex
+      flex-flow: column
+
+      li
+        border-bottom: 1px solid base.$black
+        padding: 32px 0
+
+      li:last-of-type
+        border-bottom: none

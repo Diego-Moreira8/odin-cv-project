@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/ProfileSectionEditing.css";
 
 class ProfileSectionEditing extends Component {
   constructor(props) {
@@ -110,10 +111,18 @@ class ProfileSectionEditing extends Component {
             onChange={this.handleChanges}
           />
         </div>
-        <button type="button" onClick={this.cancelChanges}>
-          Cancel
-        </button>
-        <button type="submit">Save</button>
+        <div className="form-buttons">
+          <button
+            type="button"
+            className="cancel-button"
+            onClick={this.cancelChanges}
+          >
+            Cancel
+          </button>
+          <button type="submit" className="save-button">
+            Save
+          </button>
+        </div>
       </form>
     );
   }

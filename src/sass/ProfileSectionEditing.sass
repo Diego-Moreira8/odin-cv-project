@@ -1,0 +1,43 @@
+@use "base"
+
+.profile-section-editing
+  margin-top: 48px
+  height: 100%
+  display: flex
+  flex-flow: column
+  gap: 16px
+
+  .form-row
+    background-color: base.$white-hover
+    display: flex
+    flex-flow: column
+    justify-content: center
+    border-radius: 8px
+
+    label
+      padding: 8px 8px 0 8px
+      font-size: 0.75rem
+      font-weight: bold
+
+    input
+      padding: 4px 8px 8px 8px 
+      background-color: transparent
+      color: inherit
+      font-size: 1rem
+      border: none
+
+    input:focus
+      outline: none
+
+  .form-buttons
+    display: flex
+    justify-content: center
+    gap: 16px
+
+    .cancel-button
+      border: 2px solid base.$white
+
+    .save-button
+      border: 2px solid base.$white
+      background-color: base.$white
+      color: base.$main-color

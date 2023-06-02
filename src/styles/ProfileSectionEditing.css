@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+:root {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 4px 12px;
+  border: 2px solid #ededed;
+  border-radius: 1rem;
+  background-color: #2f465c;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  outline: 2px solid #2f465c;
+}
+
+button.danger {
+  background-color: #760505;
+}
+
+.profile-section-editing {
+  margin-top: 48px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.profile-section-editing .form-row {
+  background-color: rgba(255, 255, 255, 0.1254901961);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  border-radius: 8px;
+}
+.profile-section-editing .form-row label {
+  padding: 8px 8px 0 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.profile-section-editing .form-row input {
+  padding: 4px 8px 8px 8px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1rem;
+  border: none;
+}
+.profile-section-editing .form-row input:focus {
+  outline: none;
+}
+.profile-section-editing .form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.profile-section-editing .form-buttons .cancel-button {
+  border: 2px solid #fff;
+}
+.profile-section-editing .form-buttons .save-button {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #2f465c;
+}
+
+/*# sourceMappingURL=ProfileSectionEditing.css.map */

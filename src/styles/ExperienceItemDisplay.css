@@ -34,18 +34,15 @@ button.danger {
   background-color: #760505;
 }
 
-#body {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+.exp-item-display {
+  display: flex;
+  flex-flow: column;
+  gap: 4px;
 }
-#body main {
-  max-width: 1200px;
-  padding: 32px;
-  margin: auto;
-  display: grid;
-  gap: 16px;
-  grid-template-columns: 4fr repeat(2, 5fr);
+.exp-item-display .exp-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=ExperienceItemDisplay.css.map */

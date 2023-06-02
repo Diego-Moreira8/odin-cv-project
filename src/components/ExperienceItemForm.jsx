@@ -10,8 +10,8 @@ class ExperienceItemForm extends Component {
       id: uuid(),
       location: "",
       area: "",
-      yearFrom: 0,
-      yearTo: 0,
+      yearFrom: new Date().getFullYear(),
+      yearTo: new Date().getFullYear(),
       description: "",
     };
 
@@ -64,6 +64,7 @@ class ExperienceItemForm extends Component {
             name="location"
             id="location"
             value={location}
+            required={true}
             onChange={this.handleChanges}
           />
         </div>
@@ -74,6 +75,7 @@ class ExperienceItemForm extends Component {
             name="area"
             id="area"
             value={area}
+            required={true}
             onChange={this.handleChanges}
           />
         </div>
@@ -84,6 +86,9 @@ class ExperienceItemForm extends Component {
             name="yearFrom"
             id="year-from"
             value={yearFrom}
+            min="1900"
+            max="2099"
+            step="1"
             onChange={this.handleChanges}
           />
         </div>
@@ -94,11 +99,14 @@ class ExperienceItemForm extends Component {
             name="yearTo"
             id="year-to"
             value={yearTo}
+            min="1900"
+            max="2099"
+            step="1"
             onChange={this.handleChanges}
           />
         </div>
         <div className="form-row">
-          <label htmlFor="description">Finishing year:</label>
+          <label htmlFor="description">Description:</label>
           <textarea
             name="description"
             id="description"

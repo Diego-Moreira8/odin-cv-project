@@ -31,8 +31,16 @@ class ProfileSectionDisplay extends Component {
         <ul className="profile-contact-list">
           <ProfileLink link={"tel:" + phone} icon={phoneIcon} text={phone} />
           <ProfileLink link={"mailto:" + email} icon={emailIcon} text={email} />
-          <ProfileLink link={linkedin} icon={linkedinIcon} text={linkedin} />
-          <ProfileLink link={github} icon={githubIcon} text={github} />
+          <ProfileLink
+            link={"https://" + linkedin}
+            icon={linkedinIcon}
+            text={linkedin}
+          />
+          <ProfileLink
+            link={"https://" + github}
+            icon={githubIcon}
+            text={github}
+          />
         </ul>
       </div>
     );

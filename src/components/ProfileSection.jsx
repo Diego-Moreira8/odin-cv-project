@@ -11,13 +11,13 @@ class ProfileSection extends Component {
       isEditing: false,
       userInfo: {
         picture: profilePicture,
-        name: "John Doe",
-        position: "Web Developer",
+        name: "Your Name",
+        position: "Your Position",
         contactList: {
-          phone: 5551234,
-          email: "johndoe@domain.com",
-          linkedin: "linkedin.com",
-          github: "github.com",
+          phone: 12345678,
+          email: "your.email@domain.com",
+          linkedin: "linkedin.com/in/<YourUserName>",
+          github: "github.com/<YourUserName>",
         },
       },
     };

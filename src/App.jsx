@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import "./styles/App.css";
 import Header from "./components/Header";
 import ProfileSection from "./components/ProfileSection";
 import ExperienceSection from "./components/ExperienceSection";
 import MyFooter from "./components/MyFooter";
+import "./styles/base.css";
+import "./styles/App.css";
 
 export default class App extends Component {
   constructor() {

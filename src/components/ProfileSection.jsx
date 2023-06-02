@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../styles/ProfileSection.css";
 import profilePicture from "../images/profile-picture.jpg";
 import ProfileSectionDisplay from "./ProfileSectionDisplay";
 import ProfileSectionEditing from "./ProfileSectionEditing";

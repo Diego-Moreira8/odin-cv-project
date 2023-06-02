@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-// import ProfileLink from "./ProfileLink";
-// import phoneIcon from "../images/icon-phone.svg";
-// import emailIcon from "../images/icon-email.svg";
-// import linkedinIcon from "../images/icon-linkedin.svg";
-// import githubIcon from "../images/icon-github.svg";
 
 class ProfileSectionEditing extends Component {
   constructor(props) {

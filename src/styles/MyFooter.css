@@ -1,57 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-:root, button {
+:root {
   font-family: Nunito, Arial, Helvetica, sans-serif;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 2rem;
 }
 
 button {
@@ -64,29 +13,32 @@ button {
   cursor: pointer;
 }
 
-.my-footer {
+footer {
+  padding: 4px 0;
   background: linear-gradient(100deg, #43596d, #2f465c);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  gap: 8px;
 }
-.my-footer .credits {
-  margin-right: 16px;
+footer .credits {
+  margin-right: 4px;
 }
-.my-footer .links {
+footer .links {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-.my-footer .links a {
-  margin: 0 4px;
-  padding: 4px 12px;
+footer .links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
 }
-.my-footer .links a:hover {
+footer .links a:hover {
   background-color: rgba(255, 255, 255, 0.1254901961);
 }
 

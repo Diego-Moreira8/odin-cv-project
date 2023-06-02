@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { v4 as uuid } from "uuid";
 import ExperienceItem from "./ExperienceItem";
 import ExperienceItemForm from "./ExperienceItemForm";
-import "../styles/ExperienceSection.css";
 
 export default class ExperienceSection extends Component {
   constructor(props) {

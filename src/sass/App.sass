@@ -1,14 +1,9 @@
-@import "index.sass"
-
-#body
+#body 
+  min-height: 100vh
   display: grid
   grid-template-rows: auto 1fr auto
-  height: 100vh
 
   main
-    width: 1200px
-    margin: 0 auto
-    padding: 32px
+    background-color: lightblue
     display: grid
-    grid-template-columns: 1fr repeat(2, 2fr)
-    gap: 16px
+    grid-template-columns: repeat(3, 1fr)

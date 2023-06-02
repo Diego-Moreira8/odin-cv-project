@@ -2,6 +2,8 @@
 
 $main-fonts: Nunito, Arial, Helvetica, sans-serif
 
+$sections-border-radius: 24px
+
 $main-color-gradient: linear-gradient(100deg, #43596d, #2f465c)
 $main-color: #2f465c
 $black: #3f3f3f
@@ -12,11 +14,21 @@ $white-hover: #ffffff20
 :root
   font-family: $main-fonts
 
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.5rem
+
 button
   font-weight: bold
   font-size: 1rem
-  padding: 4px 8px
+  padding: 4px 12px
   border: 2px solid $black
   border-radius: 1rem
   background-color: inherit
+  color: inherit
   cursor: pointer

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import profilePicture from "../images/profile-picture.jpg";
 import ProfileSectionDisplay from "./ProfileSectionDisplay";
 import ProfileSectionEditing from "./ProfileSectionEditing";
+import "../styles/ProfileSection.css";
 
 class ProfileSection extends Component {
   constructor() {

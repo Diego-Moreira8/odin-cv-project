@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { v4 as uuid } from "uuid";
+import "../styles/ProfileLink.css";
 
 export default class ProfileLink extends Component {
   constructor(props) {

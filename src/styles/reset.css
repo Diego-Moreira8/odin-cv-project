@@ -71,8 +71,6 @@ details,
 embed,
 figure,
 figcaption,
-footer,
-header,
 hgroup,
 menu,
 nav,
@@ -87,8 +85,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -97,8 +93,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
-header,
 hgroup,
 menu,
 nav,

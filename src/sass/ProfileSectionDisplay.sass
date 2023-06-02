@@ -1,0 +1,35 @@
+@use "base"
+  
+.profile-section-display
+  display: flex
+  flex-flow: column
+  align-items: center
+  gap: 16px
+
+  button
+    border: 2px solid base.$main-color
+    background-color: base.$white
+    color: base.$main-color
+
+  button:hover
+    outline: 2px solid white
+
+  .profile-info
+    display: flex
+    flex-flow: column
+    align-items: center
+    gap: 8px
+
+    .profile-picture
+      width: 200px
+      border-radius: 100%
+      border: 4px solid base.$white
+
+    .profile-position
+      font-size: 1.5rem
+
+  .profile-contact-list
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center

@@ -4,6 +4,7 @@ import phoneIcon from "../images/icon-phone.svg";
 import emailIcon from "../images/icon-email.svg";
 import linkedinIcon from "../images/icon-linkedin.svg";
 import githubIcon from "../images/icon-github.svg";
+import "../styles/ProfileSectionDisplay.css";
 
 class ProfileSectionDisplay extends Component {
   constructor(props) {

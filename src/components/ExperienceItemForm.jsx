@@ -1,133 +1,118 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import "../styles/ExperienceItemForm.css";
 
-class ExperienceItemForm extends Component {
-  constructor(props) {
-    super(props);
+function ExperienceItemForm({
+  experienceInfo,
+  addExperience,
+  updateExperience,
+  cancelBtnAction,
+}) {
+  const emptyExperienceInfo = {
+    id: uuid(),
+    location: "",
+    area: "",
+    yearFrom: new Date().getFullYear(),
+    yearTo: new Date().getFullYear(),
+    description: "",
+  };
 
-    this.isAddingNewExperience = !this.props.hasOwnProperty("experienceInfo");
-    this.emptyExperienceInfo = {
-      id: uuid(),
-      location: "",
-      area: "",
-      yearFrom: new Date().getFullYear(),
-      yearTo: new Date().getFullYear(),
-      description: "",
-    };
+  const [expInfoCopy, setExpInfoCopy] = useState(
+    experienceInfo ? experienceInfo : emptyExperienceInfo
+  );
 
-    /* If props has no objects,
-    this form will be used to add a new item. */
-    this.state = {
-      expInfoCopy: this.isAddingNewExperience
-        ? { ...this.emptyExperienceInfo }
-        : { ...this.props.experienceInfo },
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChanges = this.handleChanges.bind(this);
-  }
-
-  handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (this.isAddingNewExperience) {
-      this.props.addExperience(this.state.expInfoCopy);
+    if (experienceInfo) {
+      updateExperience(expInfoCopy);
     } else {
-      this.props.updateExperience(this.state.expInfoCopy);
+      addExperience(expInfoCopy);
     }
 
-    this.props.cancelBtnAction();
-  }
+    cancelBtnAction();
+  };
 
-  handleChanges(e) {
-    const { name, value } = e.target;
-
-    this.setState((prevState) => ({
+  const handleChanges = (e) => {
+    setExpInfoCopy((prevState) => ({
       ...prevState,
-      expInfoCopy: {
-        ...prevState.expInfoCopy,
-        [name]: value,
-      },
+      [e.target.name]: e.target.value,
     }));
-  }
+  };
 
-  render() {
-    const { location, area, yearFrom, yearTo, description } =
-      this.state.expInfoCopy;
+  const { location, area, yearFrom, yearTo, description } = expInfoCopy;
 
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="form-row">
-          <label htmlFor="location">Location:</label>
-          <input
-            type="text"
-            name="location"
-            id="location"
-            value={location}
-            required={true}
-            onChange={this.handleChanges}
-          />
-        </div>
-        <div className="form-row">
-          <label htmlFor="area">Area:</label>
-          <input
-            type="text"
-            name="area"
-            id="area"
-            value={area}
-            required={true}
-            onChange={this.handleChanges}
-          />
-        </div>
-        <div className="form-row">
-          <label htmlFor="year-from">Starting year:</label>
-          <input
-            type="number"
-            name="yearFrom"
-            id="year-from"
-            value={yearFrom}
-            min="1900"
-            max="2099"
-            step="1"
-            onChange={this.handleChanges}
-          />
-        </div>
-        <div className="form-row">
-          <label htmlFor="year-to">Finishing year:</label>
-          <input
-            type="number"
-            name="yearTo"
-            id="year-to"
-            value={yearTo}
-            min="1900"
-            max="2099"
-            step="1"
-            onChange={this.handleChanges}
-          />
-        </div>
-        <div className="form-row">
-          <label htmlFor="description">Description:</label>
-          <textarea
-            name="description"
-            id="description"
-            value={description}
-            onChange={this.handleChanges}
-          />
-        </div>
-        <div className="form-buttons">
-          <button
-            type="button"
-            className="cancel-button"
-            onClick={this.props.cancelBtnAction}
-          >
-            Cancel
-          </button>
-          <button type="submit">Save</button>
-        </div>
-      </form>
-    );
-  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="form-row">
+        <label htmlFor="location">Location:</label>
+        <input
+          type="text"
+          name="location"
+          id="location"
+          value={location}
+          required={true}
+          onChange={handleChanges}
+        />
+      </div>
+      <div className="form-row">
+        <label htmlFor="area">Area:</label>
+        <input
+          type="text"
+          name="area"
+          id="area"
+          value={area}
+          required={true}
+          onChange={handleChanges}
+        />
+      </div>
+      <div className="form-row">
+        <label htmlFor="year-from">Starting year:</label>
+        <input
+          type="number"
+          name="yearFrom"
+          id="year-from"
+          value={yearFrom}
+          min="1900"
+          max="2099"
+          step="1"
+          onChange={handleChanges}
+        />
+      </div>
+      <div className="form-row">
+        <label htmlFor="year-to">Finishing year:</label>
+        <input
+          type="number"
+          name="yearTo"
+          id="year-to"
+          value={yearTo}
+          min="1900"
+          max="2099"
+          step="1"
+          onChange={handleChanges}
+        />
+      </div>
+      <div className="form-row">
+        <label htmlFor="description">Description:</label>
+        <textarea
+          name="description"
+          id="description"
+          value={description}
+          onChange={handleChanges}
+        />
+      </div>
+      <div className="form-buttons">
+        <button
+          type="button"
+          className="cancel-button"
+          onClick={cancelBtnAction}
+        >
+          Cancel
+        </button>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  );
 }
 
 export default ExperienceItemForm;

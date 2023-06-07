@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/odin-cv-project/static/css/main.9ed651f7.css",
-    "main.js": "/odin-cv-project/static/js/main.78dc5905.js",
+    "main.css": "/odin-cv-project/static/css/main.fe2ddc74.css",
+    "main.js": "/odin-cv-project/static/js/main.bb8e8d6d.js",
     "static/media/profile-picture.jpg": "/odin-cv-project/static/media/profile-picture.c7dd0247e1e62b65887f.jpg",
-    "static/media/icon-github.svg": "/odin-cv-project/static/media/icon-github.3e31847e7476632f941d44421e6630a4.svg",
+    "static/media/icon-github.svg": "/odin-cv-project/static/media/icon-github.ba99e43fd99efaa4c2d86d2dbe53abc3.svg",
     "index.html": "/odin-cv-project/index.html",
-    "static/media/icon-linkedin.svg": "/odin-cv-project/static/media/icon-linkedin.3e1469535381cc73a3f9eed03f5c7190.svg",
-    "static/media/icon-phone.svg": "/odin-cv-project/static/media/icon-phone.8856c7cafa57f265c46d986f70d33791.svg",
-    "static/media/icon-email.svg": "/odin-cv-project/static/media/icon-email.c6ec9dc5f2501d605c11af921367e316.svg",
-    "main.9ed651f7.css.map": "/odin-cv-project/static/css/main.9ed651f7.css.map",
-    "main.78dc5905.js.map": "/odin-cv-project/static/js/main.78dc5905.js.map"
+    "static/media/icon-linkedin.svg": "/odin-cv-project/static/media/icon-linkedin.83b2eeef2676a0fb44cb18f5ca7f3026.svg",
+    "static/media/icon-phone.svg": "/odin-cv-project/static/media/icon-phone.aab0b23070671e19ced3eafffdc9a1ad.svg",
+    "static/media/icon-email.svg": "/odin-cv-project/static/media/icon-email.0f98b997f7371eaf7e4972362d7e795e.svg",
+    "main.fe2ddc74.css.map": "/odin-cv-project/static/css/main.fe2ddc74.css.map",
+    "main.bb8e8d6d.js.map": "/odin-cv-project/static/js/main.bb8e8d6d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ed651f7.css",
-    "static/js/main.78dc5905.js"
+    "static/css/main.fe2ddc74.css",
+    "static/js/main.bb8e8d6d.js"
   ]
 }

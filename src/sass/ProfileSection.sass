@@ -1,4 +1,5 @@
 @use "base"
+@import "./media-queries"
 
 .profile-section
   background: base.$main-color-gradient
@@ -7,3 +8,8 @@
   border-radius: base.$sections-border-radius
 
   padding: 16px
+
+  @include phone
+    background: base.$main-color
+    border-radius: 0
+    min-height: calc(100vh - 75px)

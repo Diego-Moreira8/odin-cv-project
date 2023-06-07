@@ -1,9 +1,13 @@
 @use "base"
+@import "./media-queries"
   
 #body 
-  min-height: 100vh
   display: grid
   grid-template-rows: 75px calc(100vh - 125px) 50px
+  @include phone
+    grid-template-columns: 100vw
+    grid-template-rows: 75px 1fr auto
+    overflow-x: hidden
 
   main
     max-width: 1200px
@@ -12,4 +16,7 @@
     display: grid
     gap: 16px
     grid-template-columns: 4fr repeat(2, 5fr)
-    
+    @include phone
+      grid-template-columns: 100%
+      padding: 0
+      gap: 0

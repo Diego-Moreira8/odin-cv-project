@@ -35,9 +35,15 @@ button.danger {
 }
 
 #body {
-  min-height: 100vh;
   display: grid;
   grid-template-rows: 75px calc(100vh - 125px) 50px;
+}
+@media screen and (max-width: 1280px) {
+  #body {
+    grid-template-columns: 100vw;
+    grid-template-rows: 75px 1fr auto;
+    overflow-x: hidden;
+  }
 }
 #body main {
   max-width: 1200px;
@@ -46,6 +52,13 @@ button.danger {
   display: grid;
   gap: 16px;
   grid-template-columns: 4fr repeat(2, 5fr);
+}
+@media screen and (max-width: 1280px) {
+  #body main {
+    grid-template-columns: 100%;
+    padding: 0;
+    gap: 0;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

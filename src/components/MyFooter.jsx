@@ -5,7 +5,7 @@ function MyFooter() {
     <footer className="my-footer">
       <div className="credits">Build by Diego Moreira in 2023</div>
 
-      <div>●</div>
+      <div className="divisor">●</div>
 
       <div className="links">
         <a href="mailto:diego.moreira529@gmail.com">
@@ -22,7 +22,7 @@ function MyFooter() {
           </svg>
         </a>
 
-        <div>●</div>
+        <div className="divisor">●</div>
 
         <a href="https://github.com/Diego-Moreira8" target="_blank">
           <svg
@@ -39,7 +39,7 @@ function MyFooter() {
           </svg>
         </a>
 
-        <div>●</div>
+        <div className="divisor">●</div>
 
         <a href="https://www.linkedin.com/in/diego-moreira8/" target="_blank">
           <svg

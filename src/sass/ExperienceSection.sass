@@ -1,4 +1,5 @@
 @use "base"
+@import "./media-queries"
 
 .experience-section
   background: base.$main-color-gradient
@@ -6,6 +7,8 @@
   padding: 4px
   display: grid
   grid-template-rows: auto 1fr
+  @include phone
+    margin: 8px 32px 8px 16px
 
   h2
     color: base.$white
@@ -21,6 +24,8 @@
     align-items: center
     overflow: auto
     height: calc(100vh - 300px)
+    @include phone
+      height: fit-content
 
     .add-experience-button
       background-color: base.$main-color

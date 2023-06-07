@@ -41,6 +41,11 @@ button.danger {
   display: grid;
   grid-template-rows: auto 1fr;
 }
+@media screen and (max-width: 1280px) {
+  .experience-section {
+    margin: 8px 32px 8px 16px;
+  }
+}
 .experience-section h2 {
   color: #fff;
   text-align: center;
@@ -55,6 +60,11 @@ button.danger {
   align-items: center;
   overflow: auto;
   height: calc(100vh - 300px);
+}
+@media screen and (max-width: 1280px) {
+  .experience-section .experience-section-box {
+    height: fit-content;
+  }
 }
 .experience-section .experience-section-box .add-experience-button {
   background-color: #2f465c;

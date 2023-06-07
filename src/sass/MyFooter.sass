@@ -1,4 +1,10 @@
 @use "base"
+@import "./media-queries"
+
+// Hides the first divisor when on phone 
+footer > .divisor
+  @include phone
+    display: none
 
 footer
   padding: 4px 0 
@@ -11,9 +17,12 @@ footer
   justify-content: center
   gap: 8px
 
+  @include phone
+    flex-flow: column
+    padding: 8px 0 
+
   .credits
     margin-right: 4px
-
 
   .links
     display: flex

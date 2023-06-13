@@ -6,7 +6,7 @@ function ProfileLink({ link, icon, text }) {
     <li key={uuid()}>
       <a href={link} target="_blank">
         <img src={icon} />
-        {text}
+        <div className="text-link">{text}</div>
       </a>
     </li>
   );

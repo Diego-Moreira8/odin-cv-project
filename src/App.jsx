@@ -11,8 +11,10 @@ function App() {
       <Header />
       <main>
         <ProfileSection />
-        <ExperienceSection experienceType="Education" />
-        <ExperienceSection experienceType="Professional Experience" />
+        <div className="experiences-group">
+          <ExperienceSection experienceType="Education" />
+          <ExperienceSection experienceType="Professional Experience" />
+        </div>
       </main>
       <MyFooter />
     </div>

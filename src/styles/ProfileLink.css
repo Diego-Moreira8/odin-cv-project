@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -47,6 +47,11 @@ li a {
 }
 li a img {
   width: 20px;
+}
+li a .text-link {
+  max-width: 15rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 li a:hover {
   background-color: rgba(255, 255, 255, 0.1254901961);

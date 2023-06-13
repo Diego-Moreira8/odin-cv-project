@@ -1,4 +1,5 @@
 @use "base"
+@import "./media-queries"
   
 .profile-section-display
   display: flex
@@ -30,7 +31,9 @@
       font-size: 1.5rem
 
   .profile-contact-list
-    display: flex
-    flex-flow: column
-    align-items: center
-    justify-content: center
+    display: grid
+    grid-template-columns: 1fr
+    @include mediumScreen
+      grid-template-columns: repeat(2, 1fr)
+    @include phone
+      grid-template-columns: 1fr

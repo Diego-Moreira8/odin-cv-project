@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -64,10 +64,18 @@ button.danger {
   font-size: 1.5rem;
 }
 .profile-section-display .profile-contact-list {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (max-width: 1200px) {
+  .profile-section-display .profile-contact-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  .profile-section-display .profile-contact-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=ProfileSectionDisplay.css.map */

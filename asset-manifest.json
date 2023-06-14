@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/odin-cv-project/static/css/main.133ce2b3.css",
-    "main.js": "/odin-cv-project/static/js/main.22e9bfec.js",
+    "main.js": "/odin-cv-project/static/js/main.3180711c.js",
     "static/media/profile-picture.jpg": "/odin-cv-project/static/media/profile-picture.c7dd0247e1e62b65887f.jpg",
     "static/media/icon-github.svg": "/odin-cv-project/static/media/icon-github.ba99e43fd99efaa4c2d86d2dbe53abc3.svg",
     "static/media/icon-linkedin.svg": "/odin-cv-project/static/media/icon-linkedin.83b2eeef2676a0fb44cb18f5ca7f3026.svg",
@@ -9,10 +9,10 @@
     "static/media/icon-phone.svg": "/odin-cv-project/static/media/icon-phone.aab0b23070671e19ced3eafffdc9a1ad.svg",
     "static/media/icon-email.svg": "/odin-cv-project/static/media/icon-email.0f98b997f7371eaf7e4972362d7e795e.svg",
     "main.133ce2b3.css.map": "/odin-cv-project/static/css/main.133ce2b3.css.map",
-    "main.22e9bfec.js.map": "/odin-cv-project/static/js/main.22e9bfec.js.map"
+    "main.3180711c.js.map": "/odin-cv-project/static/js/main.3180711c.js.map"
   },
   "entrypoints": [
     "static/css/main.133ce2b3.css",
-    "static/js/main.22e9bfec.js"
+    "static/js/main.3180711c.js"
   ]
 }

@@ -7,8 +7,6 @@ import "../styles/ProfileSectionEditing.css";
 function ProfileSectionEditing({ userInfo, updateUserInfo }) {
   const [userInfoCopy, setUserInfoCopy] = useState({ ...userInfo });
 
-  console.log(userInfoCopy.picture);
-
   const handleChanges = (e) => {
     const { name, value } = e.target;
 

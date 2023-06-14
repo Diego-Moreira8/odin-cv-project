@@ -4,8 +4,8 @@ import ProfileSectionEditing from "./ProfileSectionEditing";
 import "../styles/ProfileSection.css";
 
 function ProfileSection() {
-  const [isEditing, setIsEditing] = useState(false);
-  const [userInfo, setUserInfo] = useState({
+  const storedInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const exampleInfo = {
     picture: "default",
     name: "Your Name",
     position: "Your Position",
@@ -15,9 +15,16 @@ function ProfileSection() {
       linkedin: "linkedin.com/in/<YourUserName>",
       github: "github.com/<YourUserName>",
     },
-  });
+  };
+
+  const [userInfo, setUserInfo] = useState(
+    storedInfo ? storedInfo : exampleInfo
+  );
+
+  const [isEditing, setIsEditing] = useState(false);
 
   const updateUserInfo = (newInfo) => {
+    localStorage.setItem("userInfo", JSON.stringify({ ...newInfo }));
     setUserInfo({ ...newInfo });
     setIsEditing(false);
   };

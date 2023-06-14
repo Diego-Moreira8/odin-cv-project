@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import _ from "lodash";
 import { v4 as uuid } from "uuid";
 import ExperienceItem from "./ExperienceItem";
 import ExperienceItemForm from "./ExperienceItemForm";
@@ -6,7 +7,11 @@ import "../styles/ExperienceSection.css";
 
 function ExperienceSection({ experienceType }) {
   const [isAddingNewExp, setIsAddingNewExp] = useState(false);
-  const [experienceList, setExperienceList] = useState([
+
+  const storedInfo = JSON.parse(
+    localStorage.getItem(_.camelCase(experienceType))
+  );
+  const experienceExample = [
     {
       id: uuid(),
       location: "A university",
@@ -15,13 +20,28 @@ function ExperienceSection({ experienceType }) {
       yearTo: 2020,
       description: "A brief text that describes your experience.",
     },
-  ]);
+  ];
+
+  const [experienceList, setExperienceList] = useState(
+    storedInfo ? storedInfo : experienceExample
+  );
+
+  useEffect(
+    function updateLocalStorage() {
+      localStorage.setItem(
+        _.camelCase(experienceType),
+        JSON.stringify([...experienceList])
+      );
+    },
+    [experienceList]
+  );
 
   const toggleIsAddingNewExp = () =>
     setIsAddingNewExp((prevState) => !prevState);
 
-  const addExperience = (newExperience) =>
+  const addExperience = (newExperience) => {
     setExperienceList((prevState) => [...prevState, newExperience]);
+  };
 
   const updateExperience = (newExperience) => {
     const experienceListCopy = [...experienceList];

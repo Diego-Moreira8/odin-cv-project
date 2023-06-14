@@ -63,6 +63,41 @@ button.danger {
 .profile-section-editing .form-row input:focus {
   outline: none;
 }
+.profile-section-editing .profile-picture {
+  display: flex;
+  flex-flow: row;
+  gap: 8px;
+  padding: 16px;
+}
+@media screen and (max-width: 800px) {
+  .profile-section-editing .profile-picture {
+    flex-flow: column;
+  }
+}
+.profile-section-editing .profile-picture .picture {
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .profile-section-editing .profile-picture .picture {
+    flex-flow: row;
+  }
+}
+.profile-section-editing .profile-picture .picture input {
+  margin: 0 0 8px 0;
+}
+@media screen and (max-width: 800px) {
+  .profile-section-editing .profile-picture .picture input {
+    margin: 0 8px 0 0;
+  }
+}
+.profile-section-editing .profile-picture .picture label img {
+  width: 75px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+}
 .profile-section-editing .form-buttons {
   display: flex;
   justify-content: center;

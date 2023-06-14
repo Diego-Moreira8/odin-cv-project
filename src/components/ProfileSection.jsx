@@ -1,5 +1,4 @@
 import { useState } from "react";
-import profilePicture from "../images/profile-picture.jpg";
 import ProfileSectionDisplay from "./ProfileSectionDisplay";
 import ProfileSectionEditing from "./ProfileSectionEditing";
 import "../styles/ProfileSection.css";
@@ -7,7 +6,7 @@ import "../styles/ProfileSection.css";
 function ProfileSection() {
   const [isEditing, setIsEditing] = useState(false);
   const [userInfo, setUserInfo] = useState({
-    picture: profilePicture,
+    picture: "default",
     name: "Your Name",
     position: "Your Position",
     contactList: {

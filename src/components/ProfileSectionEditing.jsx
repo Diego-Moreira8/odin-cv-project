@@ -1,13 +1,18 @@
 import { useState } from "react";
+import profilePicture from "../images/profile-picture.jpg";
+import catProfilePicture from "../images/profile-picture-cat.png";
+import puppyProfilePicture from "../images/profile-picture-puppy.png";
 import "../styles/ProfileSectionEditing.css";
 
 function ProfileSectionEditing({ userInfo, updateUserInfo }) {
   const [userInfoCopy, setUserInfoCopy] = useState({ ...userInfo });
 
+  console.log(userInfoCopy.picture);
+
   const handleChanges = (e) => {
     const { name, value } = e.target;
 
-    if (name === "name" || name === "position") {
+    if (name === "name" || name === "position" || name === "picture") {
       setUserInfoCopy((prevState) => ({ ...prevState, [name]: value }));
     } else {
       // Updating contact list
@@ -25,11 +30,51 @@ function ProfileSectionEditing({ userInfo, updateUserInfo }) {
 
   const cancelChanges = () => updateUserInfo(userInfo);
 
-  const { name, position, contactList } = userInfoCopy;
+  const { picture, name, position, contactList } = userInfoCopy;
   const { phone, email, linkedin, github } = contactList;
   return (
     <form className="profile-section-editing" onSubmit={handleSubmit}>
-      {/* PROFILE PICTURE */}
+      <div className="form-row profile-picture">
+        <div className="picture">
+          <input
+            type="radio"
+            name="picture"
+            id="default"
+            value="default"
+            checked={picture === "default"}
+            onChange={handleChanges}
+          />
+          <label htmlFor="default">
+            <img src={profilePicture} />
+          </label>
+        </div>
+        <div className="picture">
+          <input
+            type="radio"
+            name="picture"
+            id="puppy"
+            value="puppy"
+            checked={picture === "puppy"}
+            onChange={handleChanges}
+          />
+          <label htmlFor="puppy">
+            <img src={puppyProfilePicture} />
+          </label>
+        </div>
+        <div className="picture">
+          <input
+            type="radio"
+            name="picture"
+            id="cat"
+            value="cat"
+            checked={picture === "cat"}
+            onChange={handleChanges}
+          />
+          <label htmlFor="cat">
+            <img src={catProfilePicture} />
+          </label>
+        </div>
+      </div>
       <div className="form-row">
         <label htmlFor="name">Name:</label>
         <input
